@@ -1,0 +1,36 @@
+﻿<Page x:Class="ComputerStorePresentation.StorePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ComputerStorePresentation"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StorePage" Background="DarkGray" Height="450" Width="800">
+
+    <Grid>
+
+        <Button x:Name ="FindButton" Click="FindById_Click" Content="Найти товар по по названию" HorizontalAlignment="Left" Margin="42,78,0,0" VerticalAlignment="Top" Width="176"/>
+        <TextBox TextChanged="textChangedEventHandler" x:Name ="IdTextBox" HorizontalAlignment="Left" Margin="26,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,39,0,0" TextWrapping="Wrap" Text="Название:" VerticalAlignment="Top" Width="86" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="304,16,0,0" TextWrapping="Wrap" Text="Id:" VerticalAlignment="Top" Width="86" Height="23"/>
+        <TextBlock HorizontalAlignment="Left" Margin="286,63,0,0" TextWrapping="Wrap" Text="Цена:" VerticalAlignment="Top" Width="76" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,87,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Top" Height="22" Width="82"/>
+        <TextBlock x:Name="IdBlock" HorizontalAlignment="Left" Margin="344,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="366" Height="23"/>
+        <TextBlock x:Name="NameBlock" HorizontalAlignment="Left" Margin="344,39,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="366" Height="22"/>
+        <TextBlock x:Name="PriceBlock" HorizontalAlignment="Left" Margin="344,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="366" Height="22"/>
+        <TextBlock x:Name="DescriptionBlock" HorizontalAlignment="Left" Margin="344,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="420" Height="44"/>
+        <Button Click ="AddItem_Click" Content="Добавить товар" HorizontalAlignment="Left" Margin="56,200,0,0" VerticalAlignment="Top" Width="115"/>
+        <TextBox x:Name="AddNameBlock" HorizontalAlignment="Left" Margin="329,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name ="AddPriceBlock" HorizontalAlignment="Left" Margin="329,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230"/>
+        <TextBox x:Name="AddDescriptionBock" HorizontalAlignment="Left" Margin="329,214,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="48"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,166,0,0" TextWrapping="Wrap" Text="Название:" VerticalAlignment="Top" Width="86" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="283,189,0,0" TextWrapping="Wrap" Text="Цена:" VerticalAlignment="Top" Width="76" Height="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="262,0,0,0" TextWrapping="Wrap" Text="Описание:" VerticalAlignment="Center" Height="22" Width="81"/>
+        <Button Click="RemoveById_Click" Content="Удалить" HorizontalAlignment="Left" Margin="55,296,0,0" VerticalAlignment="Top" Width="116"/>
+        <ComboBox x:Name ="ItemsComboBox" HorizontalAlignment="Left" Margin="309,300,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button Click="ViewAllItems_Click" Content="Посмотреть все товары" HorizontalAlignment="Left" Margin="241,341,0,0" VerticalAlignment="Top" Width="262"/>
+        <ComboBox x:Name="SearchBox" SelectionChanged="ComboBox_SelectionChanged" HorizontalAlignment="Left" Margin="26,49,0,0" VerticalAlignment="Top" Width="208" Height="1"/>
+
+    </Grid>
+</Page>
